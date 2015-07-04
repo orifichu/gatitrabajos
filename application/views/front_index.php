@@ -41,18 +41,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">GatiTrabajos</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="<?php echo base_url(); ?>">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ofertas Laborales <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo base_url('ofertas-laborales'); ?>">Buscar Ofertas</a></li>
+                <li><a href="<?php echo base_url('empresas'); ?>">Lista de Empresas</a></li>
+              </ul>
+            </li>
+            <li><a href="<?php echo base_url('contactenos'); ?>">Contáctanos</a></li>
+          </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
