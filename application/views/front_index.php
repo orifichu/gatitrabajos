@@ -49,11 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ofertas Laborales <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url('ofertas-laborales'); ?>">Buscar Ofertas</a></li>
-                <li><a href="<?php echo base_url('empresas'); ?>">Lista de Empresas</a></li>
+                <li><a href="<?php echo base_url('ofertas-laborales'); ?>">Búqueda de Ofertas Laborales</a></li>
+                <li><a href="<?php echo base_url('empresas'); ?>">Listado de Empresas</a></li>
               </ul>
             </li>
-            <li><a href="<?php echo base_url('contactenos'); ?>">Contáctanos</a></li>
+            <li><a href="<?php echo base_url('contactenos'); ?>">Contáctenos</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -62,9 +62,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1>¡Bienvenidos!</h1>
+        <p>Contamos con las todas ofertas laborales vigentes de las principales entidades públicas y privadas en Perú. ¿Deseas empezar a trabajar ya mismo? Entonces realiza una <a href="<?php echo base_url('ofertas-laborales'); ?>">búsqueda de ofertas laborales</a> o échale un vistazo a nuestro <a href="<?php echo base_url('empresas'); ?>">listado de empresas</a>. Seguramente más de una de las ofertas laborales que encontrarás ha sido hecha para ti.</p>
       </div>
     </div>
 
@@ -72,26 +71,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Ofertas Laborales</h2>
+          <p>Si buscas empleo de acuerdo a tu perfil profesional entonces realiza una búsqueda de ofertas laborales y encuentra aquella que ha sido hecha para ti.</p>
+          <p><a class="btn btn-default" href="<?php echo base_url('ofertas-laborales'); ?>" role="button">Continuar &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Listado de Empresas</h2>
+          <p>Si buscas empleo en una empresa en particular pues échale un vistazo a nuestro listado de empresas y encuentra la lista de empleos que ofrece dicha empresa.</p>
+          <p><a class="btn btn-default" href="<?php echo base_url('empresas'); ?>" role="button">Continuar &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Contáctenos</h2>
+          <p>¿No encuentras la empresa que buscabas? ¿Hay alguna falla en la página? ¿Algo que se pueda mejorar? No dudes en ponerte en contacto con nosotros. Estaremos felices de prestar atención a tus dudas y sugerencias.</p>
+          <p><a class="btn btn-default" href="<?php echo base_url('contactenos'); ?>" role="button">Continuar &raquo;</a></p>
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>&copy; GatiTrabajos <?php echo date('Y'); ?>. Una página creada con puro <a href="http://codigolindo.com" target="_blank">CodigoLindo</a></p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php echo assets_url(); ?>js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
