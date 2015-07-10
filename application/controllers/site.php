@@ -5,6 +5,14 @@ class Site extends MY_Controller {
 	//variables generales
 	var $prefix = 'front_';
 
+	public function contactenos()
+	{
+	}
+
+	public function empresas()
+	{
+	}
+
 	public function index()
 	{
 		$view_name = $this->get_view_name( $this->prefix, __FUNCTION__ );
@@ -66,6 +74,10 @@ class Site extends MY_Controller {
 		}
 
 		echo "Mail Sent";
+	}
+
+	public function ofertas_laborales()
+	{
 	}
 }
 

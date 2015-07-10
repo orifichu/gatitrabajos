@@ -56,3 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 //route example: http://domain.tld/en/controller => http://domain.tld/controller
 $route['(\w{2})/(.*)'] = '$2';
 $route['(\w{2})'] = $route['default_controller'];
+
+//remap
+$route['contactenos']       = $route['default_controller'] . '/contactenos';
+$route['empresas']          = $route['default_controller'] . '/empresas';
+$route['ofertas-laborales'] = $route['default_controller'] . '/ofertas_laborales';
