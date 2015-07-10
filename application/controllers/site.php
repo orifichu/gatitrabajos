@@ -7,15 +7,25 @@ class Site extends MY_Controller {
 
 	public function contactenos()
 	{
+		//cargar el view
+		$this->load_view( __FUNCTION__ );
 	}
 
 	public function empresas()
 	{
+		//cargar el view
+		$this->load_view( __FUNCTION__ );
 	}
 
 	public function index()
 	{
-		$view_name = $this->get_view_name( $this->prefix, __FUNCTION__ );
+		//cargar el view
+		$this->load_view( __FUNCTION__ );
+	}
+
+	protected function load_view( $function_name )
+	{
+		$view_name = $this->get_view_name( $this->prefix, $function_name );
 
 		//cargar el archivo que contiene las traducciones que le corresponden a este view
 		$this->load_language( $view_name );
