@@ -61,3 +61,6 @@ $route['(\w{2})'] = $route['default_controller'];
 $route['contactenos']       = $route['default_controller'] . '/contactenos';
 $route['empresas']          = $route['default_controller'] . '/empresas';
 $route['ofertas-laborales'] = $route['default_controller'] . '/ofertas_laborales';
+
+//remap back
+$route['panel/check_login'] = 'usuario/check_login';
