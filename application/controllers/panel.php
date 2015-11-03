@@ -4,9 +4,13 @@ class Panel extends MY_Controller {
 
 	//variables generales
 	var $prefix = 'back_';
-
+	
 	public function dashboard()
 	{
+		//check if is logged in
+		if ( ! $this->is_logged_in() ) redirect( $this->urls['panel_login_url'] );
+
+
 		//cargar el view
 		$this->load_view( __FUNCTION__ );
 	}
@@ -15,13 +19,13 @@ class Panel extends MY_Controller {
 	{
 		$panel_base_url = base_url('panel');
 
-		if (1 != 1) {
+		if ( $this->is_logged_in() ) {
 			//si hay usuario logueado entonces dashboard
-			redirect( $panel_base_url . '/dashboard' );
+			redirect( $this->urls['panel_dashboard_url'] );
 
 		} else {
 			//si no hay usuario logueado entonces login
-			redirect( $panel_base_url . '/login' );
+			redirect( $this->urls['panel_login_url'] );
 		}
 		
 	}

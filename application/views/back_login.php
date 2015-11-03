@@ -37,10 +37,10 @@ $panel_url  = sprintf("%s%s", $base_url, 'panel');
         <form action="<?php echo sprintf("%s/%s", $panel_url, 'check_login') ; ?>" class="form-signin" method="post">
           <h2 class="form-signin-heading">Gatitrabajos Panel</h2>
           <label for="nickname" class="sr-only">Usuario</label>
-          <input type="text" id="nickname" class="form-control" placeholder="Usuario" required autofocus>
+          <input type="text" id="nickname" class="form-control" name="nickname" placeholder="Usuario" required autofocus>
         
           <label for="password" class="sr-only">Contraseña</label>
-          <input type="password" id="password" class="form-control" placeholder="Contraseña" required>
+          <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña" required>
           
           <div class="checkbox">
             <label>
