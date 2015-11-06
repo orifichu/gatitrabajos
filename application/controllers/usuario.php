@@ -4,10 +4,6 @@ class Usuario extends MY_Controller {
 
 	public function check_login()
 	{
-		$panel_base_url = base_url('panel');
-		$panel_login_url = sprintf("%s/%s", $panel_base_url, 'login');
-		$panel_dashboard_url = sprintf("%s/%s", $panel_base_url, 'dashboard');
-
 		$this->load->helper( 'form' );
 		$this->load->library( 'form_validation' );
 
@@ -27,7 +23,7 @@ class Usuario extends MY_Controller {
 		$this->form_validation->set_rules($rules);
 
 		if ($this->form_validation->run() == FALSE)
-			redirect( $panel_login_url );
+			redirect( $this->urls['panel_login_url'] );
 
 		$this->data['nickname'] = set_value('nickname');
 		$this->data['password'] = hash('ripemd160', set_value('password'), false);
@@ -40,7 +36,7 @@ class Usuario extends MY_Controller {
 		$usuarios = $query->result();
 
 		if ( $query->num_rows() == 0 )
-			redirect( $panel_login_url );
+			redirect( $this->urls['panel_login_url'] );
 
 		//liberar memoria (buena práctica)
 		$query->free_result();
@@ -59,9 +55,22 @@ class Usuario extends MY_Controller {
 		$this->session->set_userdata($usuario_data);
 
 		//dashboard
-		redirect( $panel_dashboard_url, 'refresh' );
+		redirect( $this->urls['panel_dashboard_url'], 'refresh' );
 	}
 
+	public function logout()
+	{
+		$userdata = $this->session->all_userdata();
+		foreach ($userdata as $key => $value) {
+			if ($key != 'session_id') {
+				$this->session->unset_userdata($key);
+			}
+		}
+		$this->session->sess_destroy();
+
+		//dashboard
+		redirect( $this->urls['panel_login_url'], 'refresh' );
+	}
 }
 
 /* End of file usuario.php */
